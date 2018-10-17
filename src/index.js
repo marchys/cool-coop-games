@@ -1,11 +1,21 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
+
 import './index.css';
-import App from './App';
+import Games from 'games/containers/Games';
+import configureStore from './configureStore';
 import * as serviceWorker from './serviceWorker';
 
-// eslint-disable-next-line react/jsx-filename-extension
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = configureStore();
+
+/* eslint-disable react/jsx-filename-extension */
+ReactDOM.render(
+  <Provider store={store}>
+    <Games />
+  </Provider>,
+  document.getElementById('root'),
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

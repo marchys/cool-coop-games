@@ -16,6 +16,7 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
     'import/prefer-default-export': 1,
     'import/no-extraneous-dependencies': 1,
+    'import/no-named-as-default': 0,
     // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
     'react/prefer-stateless-function': 1,
     // https://github.com/prettier/prettier/blob/master/docs/configuration.md
