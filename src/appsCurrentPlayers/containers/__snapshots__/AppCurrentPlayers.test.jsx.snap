@@ -1,12 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render structure 1`] = `
-<div>
-  <p>
-    74933
-  </p>
-  <p>
-    2000
-  </p>
-</div>
+exports[`should render PlayerCount if loaded 1`] = `
+<PlayerCount
+  appId="74933"
+  playerCount={2000}
+/>
 `;

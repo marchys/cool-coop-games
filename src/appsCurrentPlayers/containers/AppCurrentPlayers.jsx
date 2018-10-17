@@ -8,6 +8,7 @@ import Loading from 'components/Loading';
 import actions from 'appsCurrentPlayers/redux/actions';
 import selectors from 'appsCurrentPlayers/redux/selectors';
 import propTypes from 'appsCurrentPlayers/redux/propTypes';
+import PlayerCount from '../components/PlayerCount';
 
 export class AppCurrentPlayers extends React.Component {
   componentDidMount() {
@@ -22,12 +23,7 @@ export class AppCurrentPlayers extends React.Component {
       return <Loading />;
     }
 
-    return (
-      <div>
-        <p>{appId}</p>
-        <p>{currentPlayers.playerCount}</p>
-      </div>
-    );
+    return <PlayerCount appId={appId} playerCount={currentPlayers.playerCount} />;
   }
 }
 

@@ -1,11 +1,22 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
+import { injectGlobal } from 'react-emotion';
 
-import './index.css';
 import Games from 'games/containers/Games';
 import configureStore from './configureStore';
 import * as serviceWorker from './serviceWorker';
+
+injectGlobal`
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+      'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+`;
 
 const store = configureStore();
 

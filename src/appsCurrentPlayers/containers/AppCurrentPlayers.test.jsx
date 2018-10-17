@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Loading from 'components/Loading';
+import PlayerCount from '../components/PlayerCount';
 import { AppCurrentPlayers } from './AppCurrentPlayers';
 
 function setup({ appId = '74933', getCurrentPlayers = jest.fn(), ...props } = {}) {
@@ -13,6 +14,9 @@ function setup({ appId = '74933', getCurrentPlayers = jest.fn(), ...props } = {}
     wrapper,
     get loading() {
       return wrapper.find(Loading);
+    },
+    get playerCount() {
+      return wrapper.find(PlayerCount);
     },
   };
 }
@@ -34,9 +38,9 @@ test('should show loading if currentPlayers is not loaded', () => {
   expect(wrapper.loading).toExist();
 });
 
-test('should render structure', () => {
+test('should render PlayerCount if loaded', () => {
   const currentPlayers = { id: '74933', loading: false, loaded: true, playerCount: 2000 };
-  const { wrapper } = setup({ currentPlayers });
+  const appsCurrentPlayers = setup({ currentPlayers });
 
-  expect(wrapper).toMatchSnapshot();
+  expect(appsCurrentPlayers.playerCount).toMatchSnapshot();
 });

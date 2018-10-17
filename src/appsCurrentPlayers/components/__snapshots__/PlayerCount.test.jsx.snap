@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render  1`] = `
+<Styled(div)>
+  <p
+    className="css-1q0hz49"
+  >
+    ID: 
+    74933
+  </p>
+  <p
+    className="css-1md3z78"
+  >
+    Count: 
+    200
+  </p>
+</Styled(div)>
+`;

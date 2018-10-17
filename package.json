@@ -20,11 +20,13 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "emotion": "^9.2.12",
     "immer": "^1.7.2",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-emotion": "^9.2.12",
     "react-redux": "^5.0.7",
     "react-scripts": "2.0.5",
     "recompose": "^0.30.0",
