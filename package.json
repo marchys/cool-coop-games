@@ -2,11 +2,13 @@
   "name": "cool-coop-games",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://marchys.github.io/cool-coop-games",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "prepush": "cross-env CI=true npm run test",
     "precommit": "lint-staged",
     "lint": "eslint .",
