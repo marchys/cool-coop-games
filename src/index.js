@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import { injectGlobal } from 'react-emotion';
 
-import Games from 'games/containers/Games';
+import GameList from 'gameList/gameList';
 import configureStore from './configureStore';
 import * as serviceWorker from './serviceWorker';
 
@@ -23,7 +23,7 @@ const store = configureStore();
 /* eslint-disable react/jsx-filename-extension */
 ReactDOM.render(
   <Provider store={store}>
-    <Games />
+    <GameList />
   </Provider>,
   document.getElementById('root'),
 );
