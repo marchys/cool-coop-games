@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import gameContainerInfo from './gameContainerInfo';
+import gameInfoContainer from './gameInfoContainer';
 
 it('should render', () => {
-  const wrapper = shallow(<gameContainerInfo />);
+  const wrapper = shallow(<gameInfoContainer />);
   expect(wrapper.getElement).not.toBe(null);
 });

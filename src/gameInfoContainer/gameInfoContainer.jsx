@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function GameContainerInfo({ name, status }) {
+export default function GameInfoContainer({ name, status }) {
   return (
     <div>
       {name} | {status}
@@ -9,7 +9,7 @@ export default function GameContainerInfo({ name, status }) {
   );
 }
 
-GameContainerInfo.propTypes = {
+GameInfoContainer.propTypes = {
   name: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
 };
