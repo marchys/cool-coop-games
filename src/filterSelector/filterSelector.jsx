@@ -4,7 +4,7 @@ import { VisibilityFilters, setVisibilityFilter } from './redux/actions';
 export default function filterSelector() {
   return (
     <select onChange={e => setVisibilityFilter(e.target.value)}>
-      <option value={VisibilityFilters.SHOW_ALL} selected>
+      <option value={VisibilityFilters.SHOW_ALL} defaultValue>
         All
       </option>
       <option value={VisibilityFilters.SHOW_PENDING}>Pending</option>

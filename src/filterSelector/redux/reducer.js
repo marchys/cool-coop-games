@@ -1,6 +1,6 @@
 import { SET_VISIBILITY_FILTER, VisibilityFilters } from './actions';
 
-const { SHOW_ALL } = VisibilityFilters;
+const { SHOW_ALL } = VisibilityFilters.SHOW_ALL;
 
 function visibilityFilter(state = SHOW_ALL, action) {
   switch (action.type) {
