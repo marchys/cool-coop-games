@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import { injectGlobal } from 'react-emotion';
 
-import GameList from 'gameList/gameList';
+import GameList from './gameListContainer/gameListContainer';
 import configureStore from './configureStore';
 import * as serviceWorker from './serviceWorker';
 
