@@ -1,6 +1,6 @@
 import React from 'react';
-import GameInfoContainer from '../gameInfoContainer/gameInfoContainer';
-import FilterSelector from '../filterSelector/filterSelector';
+import GameInfoContainer from '../../gameInfoContainer/gameInfoContainer';
+import FilterSelector from '../../filterSelector/filterSelector';
 
 export default function Games() {
   return (

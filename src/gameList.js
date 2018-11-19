@@ -1,4 +1,4 @@
-export const gameList = {
+const gameList = {
   '0': {
     title: 'Name 1',
     status: 'pending',
@@ -20,3 +20,5 @@ export const gameList = {
     status: 'pending',
   },
 };
+
+export default gameList;
