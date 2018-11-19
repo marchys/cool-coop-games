@@ -5,20 +5,11 @@ import GameInfoContainer from '../../gameInfoContainer/gameInfoContainer';
 import FilterSelector from '../../filterSelector/filterSelector';
 
 const insertGameContainers = () => {
-  const gameContainersList = [];
   const gameListValues = Object.values(gameList);
 
-  for (let index = 0; index < gameListValues.length; index + 1) {
-    gameContainersList.push(
-      <GameInfoContainer
-        key={index}
-        name={gameListValues[index].title}
-        status={gameListValues[index].status}
-      />,
-    );
-  }
-
-  return gameContainersList;
+  return gameListValues.map(curr => (
+    <GameInfoContainer key={curr.title} name={curr.title} status={curr.status} />
+  ));
 };
 
 export default class gameListPrinter extends React.Component {
