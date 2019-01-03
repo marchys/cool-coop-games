@@ -3,6 +3,7 @@ import { VisibilityFilters, setVisibilityFilter } from './redux/actions';
 
 export default function filterSelector() {
   return (
+    // Executing the ACTION CREATOR changing to a new state
     <select onChange={e => setVisibilityFilter(e.target.value)}>
       <option value={VisibilityFilters.SHOW_ALL} defaultValue>
         All
