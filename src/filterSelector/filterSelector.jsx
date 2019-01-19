@@ -1,10 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { VisibilityFilters, setVisibilityFilter } from './redux/actions';
 
-export default function filterSelector() {
+export function filterSelector({ changeVisibilityFilter }) {
   return (
     // Executing the ACTION CREATOR changing to a new state
-    <select onChange={e => setVisibilityFilter(e.target.value)}>
+    <select onChange={changeVisibilityFilter}>
       <option value={VisibilityFilters.SHOW_ALL} defaultValue>
         All
       </option>
@@ -14,3 +17,13 @@ export default function filterSelector() {
     </select>
   );
 }
+
+const mapDispatchToProps = dispatch => ({
+  changeVisibilityFilter: e => dispatch(setVisibilityFilter(e.target.value)),
+});
+
+export default connect(mapDispatchToProps)(filterSelector);
+
+filterSelector.propTypes = {
+  changeVisibilityFilter: PropTypes.func.isRequired,
+};
