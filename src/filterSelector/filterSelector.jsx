@@ -22,7 +22,10 @@ const mapDispatchToProps = dispatch => ({
   changeVisibilityFilter: e => dispatch(setVisibilityFilter(e.target.value)),
 });
 
-export default connect(mapDispatchToProps)(filterSelector);
+export default connect(
+  null,
+  mapDispatchToProps,
+)(filterSelector);
 
 filterSelector.propTypes = {
   changeVisibilityFilter: PropTypes.func.isRequired,
