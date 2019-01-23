@@ -11,10 +11,24 @@ const insertGameContainers = props => {
 
   return gameListValues.map(curr => {
     if (currFilter === 'SHOW_ALL') {
-      return <GameInfoContainer key={curr.title} name={curr.title} status={curr.status} />;
+      return (
+        <GameInfoContainer
+          key={curr.title}
+          name={curr.title}
+          status={curr.status}
+          steamId={curr.steamId}
+        />
+      );
     }
     if (currFilter === curr.status) {
-      return <GameInfoContainer key={curr.title} name={curr.title} status={curr.status} />;
+      return (
+        <GameInfoContainer
+          key={curr.title}
+          name={curr.title}
+          status={curr.status}
+          steamId={curr.steamId}
+        />
+      );
     }
     return null;
   });
